@@ -35,6 +35,8 @@
 
   --lastpart-logo-text-color-footer: #fff;
   --link-footer-color: rgba(255, 255, 255, 0.6);
+
+  --svg-icons-background: #afb1b8;
 }
 
 /*    ------  Глобальные стили ------       */
@@ -42,6 +44,9 @@
 /* Убрать подчеркивание на всех ссылках */
 .link {
   text-decoration: none;
+  /* border:1px solid red;  */
+  display: inline-block;
+  /* line-height:0; */
 }
 
 /* Глобальные атрибуты для списков */
@@ -129,7 +134,7 @@
 
 .navigation-contacts a,
 .navigation-pages a {
-  display: block;
+  /* display: block; */
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -142,6 +147,8 @@
 }
 .contacts {
   color: var(--primary-text-color);
+  display: flex;
+  align-items: center;
 }
 
 .active-page {
@@ -154,35 +161,42 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   display: flex;
-  align-items: center;
+}
+
+.icon-letter {
+  width: 16px;
+  height: 12px;
+  fill: var(--primary-text-color);
+}
+
+.icon-phone {
+  width: 10px;
+  height: 16px;
+  fill: var(--primary-text-color);
+}
+
+.navigation-contacts .icon {
+  margin-right: 10px;
 }
 
 .navigation-contacts > li {
   margin-left: 50px;
+  display: flex;
+  align-items: center;
 }
 
 /* Ховеры */
-
-.contacts:hover::before {
-  display: inline-flex;
-  /* align-items: center; */
-  height: 12px;
-  width: 16px;
-  /* left: -10px; */
-  /* margin-right: 10px; */
-  content: "";
-  position: relative;
-
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("../images/letter.svg");
-}
 
 .contacts:hover,
 .contacts:focus,
 .pages-text-color:focus,
 .pages-text-color:hover {
   color: var(--accent-color);
+}
+
+.contacts:hover .icon,
+.contacts:focus .icon {
+  fill: var(--accent-color);
 }
 
 /* ------------- Конец Хэдера ---------------*/
@@ -200,6 +214,9 @@
   margin-left: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: var(--background-color-primary);
   background-image: url(../images/bg_hero.jpg);
 }
@@ -355,9 +372,48 @@
 .team-name {
   color: var(--title-text-color);
   font-size: 16px;
-  /* line-height: 1.187; */
-  /* padding-top: 30px; */
   margin-bottom: 10px;
+}
+
+.team-icons-box {
+  padding-bottom: 30px;
+}
+
+.team-icons-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-icons-list .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.team-icon-ellipse.first:first-child {
+  margin-left: 0;
+}
+
+.team-icon-ellipse {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.team-icons-box .icon {
+  fill: var(--svg-icons-background);
+}
+
+.team-icon-ellipse:hover {
+  background-color: var(--accent-color);
+}
+
+.team-icon-ellipse:hover .icon {
+  fill: #fff;
 }
 
 .team-content {
@@ -366,8 +422,16 @@
 }
 
 .team-wrapper-bottom {
-  padding: 30px;
+  padding: 30px 30px 16px 30px;
 }
+
+/* <!---------- Постоянные клиенты --------> */
+.best-clients-list {
+  display: flex;
+}
+
+
+
 
 /*  ----------  Футер  --------------  */
 
