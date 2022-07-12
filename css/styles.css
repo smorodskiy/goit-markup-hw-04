@@ -44,9 +44,7 @@
 /* Убрать подчеркивание на всех ссылках */
 .link {
   text-decoration: none;
-  /* border:1px solid red;  */
   display: inline-block;
-  /* line-height:0; */
 }
 
 /* Глобальные атрибуты для списков */
@@ -78,18 +76,19 @@
   padding-bottom: 94px;
 }
 
-/* ------------------------ */
-
 /*  -------------- Хэдер ----------------          */
+
 /* Логотип */
 .logo {
   padding-top: 25px;
   padding-bottom: 25px;
+
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
   color: var(--accent-color);
 }
 
@@ -99,7 +98,6 @@
 
 .navigation-bar {
   display: flex;
-  /* height: 80px; */
   border-bottom: var(--navigation-bar-border-color);
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -108,8 +106,6 @@
 .navigation-bar-wrapper {
   display: flex;
   justify-content: space-between;
-  /* padding-top: 25px;
-  padding-bottom: 25px; */
 }
 
 .navigation {
@@ -118,14 +114,15 @@
 }
 
 .navigation-pages {
+  display: flex;
+  margin-left: 93px;
+
   /* dub */
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--title-text-color);
-  display: flex;
-  margin-left: 93px;
 }
 
 .navigation-pages > li {
@@ -134,7 +131,6 @@
 
 .navigation-contacts a,
 .navigation-pages a {
-  /* display: block; */
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -146,9 +142,10 @@
   color: var(--title-text-color);
 }
 .contacts {
-  color: var(--primary-text-color);
   display: flex;
   align-items: center;
+
+  color: var(--primary-text-color);
 }
 
 .active-page {
@@ -156,11 +153,12 @@
 }
 
 .navigation-contacts {
+  display: flex;
+
   /* dub */
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: flex;
 }
 
 .icon-letter {
@@ -180,9 +178,9 @@
 }
 
 .navigation-contacts > li {
-  margin-left: 50px;
   display: flex;
   align-items: center;
+  margin-left: 50px;
 }
 
 /* Ховеры */
@@ -214,11 +212,13 @@
   margin-left: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: var(--background-color-primary);
-  background-image: url(../images/bg_hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/bg_hero.jpg);
 }
 
 .order-title {
@@ -228,28 +228,29 @@
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
   color: var(--order-title-text-color);
 }
 
 .order-btn {
+  display: block;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  margin: 30px auto 0;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
 
-  display: block;
-  align-items: center;
-  cursor: pointer;
-  color: var(--order-btn-text-color);
-
-  height: 50px;
-  width: 200px;
-  margin: 30px auto 0;
-
   background: var(--order-btn-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
+
+  color: var(--order-btn-text-color);
+  cursor: pointer;
 }
 
 .order-btn:focus,
@@ -273,31 +274,35 @@
 }
 
 .quality-title {
+  padding-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
   color: var(--title-text-color);
-  padding-bottom: 10px;
 }
 
 .quality-list-icon-box {
-  box-sizing: border-box;
   height: 120px;
+
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+
+  margin-bottom: 30px;
   padding-top: 25px;
   padding-bottom: 25px;
-  display: flex;
-  justify-content: center;
+
   background: #f5f4fa;
   border-radius: 4px;
-  margin-bottom: 30px;
 }
 
 .quality-content {
   font-size: 14px;
   line-height: 1.71;
-
   /* or 171% */
   letter-spacing: 0.03em;
 }
@@ -315,6 +320,7 @@
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+
   color: var(--title-text-color);
 }
 
@@ -356,6 +362,7 @@
 .team-list {
   display: flex;
   justify-content: space-between;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.187;
@@ -364,56 +371,71 @@
 }
 
 .team-list img {
+  display: block;
   box-sizing: border-box;
   max-width: 100%;
-  display: block;
 }
 
 .team-name {
-  color: var(--title-text-color);
-  font-size: 16px;
   margin-bottom: 10px;
+
+  font-size: 16px;
+
+  color: var(--title-text-color);
+}
+
+.social-icons-list,
+.team-icons-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons-list .icon,
+.team-icons-list .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon-link.first {
+  margin-left: 0;
+}
+
+.social-icon-link {
+  margin-left: 10px;
+}
+
+.social-icon-ellipse,
+.team-icon-ellipse {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+}
+
+.team-icon-ellipse {
+  background-color: #fff;
+}
+
+.social-icon-ellipse:hover,
+.team-icon-ellipse:hover {
+  background-color: var(--accent-color);
+}
+
+.social-icon-ellipse:hover .icon,
+.team-icon-ellipse:hover .icon {
+  fill: #fff;
 }
 
 .team-icons-box {
   padding-bottom: 30px;
 }
 
-.team-icons-list {
-  display: flex;
-  justify-content: center;
-}
-
-.team-icons-list .icon {
-  width: 20px;
-  height: 20px;
-}
-
-.team-icon-ellipse.first:first-child {
-  margin-left: 0;
-}
-
-.team-icon-ellipse {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 50%;
-  margin-left: 10px;
-}
-
 .team-icons-box .icon {
   fill: var(--svg-icons-background);
-}
-
-.team-icon-ellipse:hover {
-  background-color: var(--accent-color);
-}
-
-.team-icon-ellipse:hover .icon {
-  fill: #fff;
 }
 
 .team-content {
@@ -426,19 +448,76 @@
 }
 
 /* <!---------- Постоянные клиенты --------> */
-.best-clients-list {
-  display: flex;
+
+.best-clients-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
 }
 
+.best-clients-list {
+  display: flex;
+  justify-content: center;
+}
 
+.best-clients-list .icon {
+  width: 100%;
+  height: 60px;
+  fill: #afb1b8;
+}
 
+.best-clients-list-border:first-child {
+  margin-left: 0;
+}
+
+.best-clients-list-border {
+  width: 170px;
+  height: 92px;
+  margin-left: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.best-clients-list-border:focus .icon,
+.best-clients-list-border:hover .icon {
+  fill: var(--accent-color);
+}
+
+.best-clients-list-border:focus,
+.best-clients-list-border:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.clients-icon-link {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
 
 /*  ----------  Футер  --------------  */
 
 .page-footer {
-  background-color: var(--background-color-primary);
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: var(--background-color-primary);
+}
+
+.footer-container {
+  display: flex;
 }
 
 .address-text-footer,
@@ -473,6 +552,34 @@
   color: var(--accent-color);
 }
 
+.social-box {
+  margin-left: 70px;
+}
+
+.social-box-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--order-title-text-color);
+}
+
+.social-icons-box {
+  margin-top: 20px;
+}
+
+.social-icon-ellipse {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon-ellipse .icon {
+  fill: var(--background-color-page);
+}
+
 /* ----------------------PORTFOLIO------------------------ */
 
 /* Фильтр */
@@ -500,17 +607,21 @@
 }
 
 .filter-btn {
+  height: 38px;
+
   border-radius: 4px;
   border: none;
-  height: 38px;
   padding-left: 22px;
   padding-right: 22px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.03em;
-  cursor: pointer;
+
   background-color: var(--background-color-secondary);
+
+  cursor: pointer;
 }
 
 .active-filter,
@@ -524,31 +635,41 @@
 
 /* --- Шаблоны --- */
 
-.template-section {
-  /* сделать через перменную и отнимать от падинга карток 30px*/
-  /* margin-bottom: 64px; */
+.template-item-link {
+  line-height: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.template-item-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .template-head {
   margin: -15px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .template-item {
-  background: var(--template-item-background-color);
-  box-sizing: border-box;
-  margin-bottom: 45px;
-  max-width: 370px;
-  /* margin-left: 30px; */
   margin: 15px;
+  /* margin-bottom: 45px; */
+  max-width: 370px;
+
+  box-sizing: border-box;
+
+  background: var(--template-item-background-color);
+  /* margin-left: 30px; */
 }
 
 .template-item > img {
-  box-sizing: border-box;
-  max-width: 100%;
   display: block;
+  max-width: 100%;
+
+  box-sizing: border-box;
 }
 
 .template-title {
@@ -557,6 +678,7 @@
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.06em;
+
   color: var(--title-text-color);
 }
 
@@ -574,6 +696,7 @@
 }
 
 .template-wrapper-bottom {
-  border: 1px solid var(--template-item-border-color);
   padding: 20px 24px;
+
+  border: 1px solid var(--template-item-border-color);
 }
