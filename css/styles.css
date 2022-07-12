@@ -140,9 +140,10 @@
 .pages-text-color {
   color: var(--title-text-color);
 }
-.contacts-text-color {
+.contacts {
   color: var(--primary-text-color);
 }
+
 .active-page {
   color: var(--accent-color);
 }
@@ -152,7 +153,6 @@
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   display: flex;
   align-items: center;
 }
@@ -162,8 +162,24 @@
 }
 
 /* Ховеры */
-.contacts-text-color:hover,
-.contacts-text-color:focus,
+
+.contacts:hover::before {
+  display: inline-flex;
+  /* align-items: center; */
+  height: 12px;
+  width: 16px;
+  /* left: -10px; */
+  /* margin-right: 10px; */
+  content: "";
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/letter.svg");
+}
+
+.contacts:hover,
+.contacts:focus,
 .pages-text-color:focus,
 .pages-text-color:hover {
   color: var(--accent-color);
@@ -185,6 +201,7 @@
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--background-color-primary);
+  background-image: url(../images/bg_hero.jpg);
 }
 
 .order-title {
@@ -226,6 +243,7 @@
 /* -- Особенности -- */
 .quality-list {
   display: flex;
+  justify-content: center;
 }
 
 .quality-list-item:first-child {
@@ -234,7 +252,7 @@
 
 .quality-list-item {
   margin-left: 30px;
-  /* width: 270px; */
+  width: 270px;
 }
 
 .quality-title {
@@ -245,6 +263,18 @@
   text-transform: uppercase;
   color: var(--title-text-color);
   padding-bottom: 10px;
+}
+
+.quality-list-icon-box {
+  box-sizing: border-box;
+  height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .quality-content {
